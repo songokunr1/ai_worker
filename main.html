@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clipboard Magic Tool</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Clipboard Magic Tool</h1>
+        <div class="textarea-container">
+            <textarea id="inputText" placeholder="Input text will appear here..."></textarea>
+            <textarea id="outputText" placeholder="Output text will appear here..." readonly></textarea>
+        </div>
+        <div class="button-container">
+            <button onclick="processText(getInputTextValue(), 'Translate the following English text to Polish: {input}')">
+                Translate to Polish
+            </button>
+            <button onclick="processText(getInputTextValue(), 'Correct the following English text: {input}')">
+                Correct English
+            </button>
+            <button onclick="processText(getInputTextValue(), 'Correct the following English text and provide detailed feedback for grammar and general English improvement: put in format `corrected text`, your feedback and advices. Input text to correction: `{input}`')">
+                Correct & Explain
+            </button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
